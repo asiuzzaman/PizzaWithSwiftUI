@@ -18,7 +18,15 @@ struct ContentView: View {
                 Text("Pizza company")
                     .background()
             }
-            Image(systemName: orders.isEmpty ?"cart": "cart.fill")
+            Label {
+                Text(59.59, format: .currency(code: "USD"))
+            }
+            icon: {
+                Image(
+                    systemName: orders.isEmpty ? "cart" : "cart.circle.fill"
+                )
+            }
+
             HStack {
                 Text("Order Pizza")
                     .font(.title)
@@ -36,7 +44,12 @@ struct ContentView: View {
             }
 
             VStack {
-                Image(systemName: "rectangle.fill").font(.largeTitle)
+                if let image = UIImage(named: "0_lg") {
+                    Image(uiImage: image)
+                } else {
+                    Image("surfboard_lg")
+                }
+
                 Text("Delivery")
                 Text("Free")
             }
@@ -47,7 +60,11 @@ struct ContentView: View {
                         alignment: .top,
                         spacing: 15
                     ){
-                        Image(systemName: "\(item).circle.fill").font(.largeTitle)
+                        if let image = UIImage(named: "\(item)_sm") {
+                            Image(uiImage: image)
+                        } else {
+                            Image("surfboard_lg")
+                        }
                         VStack(alignment: .leading) {
                             Text("Margarita")
                             Text("Description")
