@@ -14,16 +14,17 @@ struct MenuRowView: View {
         HStack(
             alignment: .top,
             spacing: 15) {
-            if let image = UIImage(named: "\(item)_sm") {
-                Image(uiImage: image)
-            } else {
-                Image("surfboard_lg")
+                if let image = UIImage(named: "\(item)_sm") {
+                    Image(uiImage: image)
+                } else {
+                    Image("surfboard_lg")
+                }
+                VStack(alignment: .leading) {
+                    Text("Margarita")
+                    RatingView(rating: 4)
+                }
             }
-            VStack(alignment: .leading) {
-                Text("Margarita")
-                Text("Description")
-            }
-        }    }
+    }
 }
 
 #Preview {

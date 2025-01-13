@@ -6,8 +6,13 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		158870952D3582000092966A /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158870942D3582000092966A /* RatingView.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		15822E562D33C298005FF87D /* EatingPizza.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EatingPizza.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		158870942D3582000092966A /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -32,6 +37,7 @@
 		15822E4D2D33C297005FF87D = {
 			isa = PBXGroup;
 			children = (
+				158870942D3582000092966A /* RatingView.swift */,
 				15822E582D33C298005FF87D /* EatingPizza */,
 				15822E572D33C298005FF87D /* Products */,
 			);
@@ -119,6 +125,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				158870952D3582000092966A /* RatingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
