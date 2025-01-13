@@ -8,11 +8,35 @@
 import SwiftUI
 
 struct OrderView: View {
+    let orders: [Int]
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            
+            Label {
+                Text(59.59, format: .currency(code: "USD"))
+            }
+            icon: {
+                Image(
+                    systemName: orders.isEmpty ? "cart" : "cart.circle.fill"
+                )
+            }
+
+            HStack {
+                Text("Order Pizza")
+                    .font(.title)
+                Spacer()
+            }
+
+            ScrollView {
+                ForEach(orders, id:\.self) { order in
+                    OrderRowView(order: order)
+                }
+            }
+        }
     }
 }
 
+
 #Preview {
-    OrderView()
+    OrderView(orders: [1,2,3,4,5, 7, 10])
 }
